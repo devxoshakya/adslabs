@@ -181,7 +181,7 @@ export const DATA = {
         }
       ],
       image: "",
-      video: "/videos/anveshna.mp4"
+      video: "https://github.com/devxoshakya/portfolio/raw/main/public/videos/anveshna.mp4"
 
     },
     {
@@ -213,7 +213,7 @@ export const DATA = {
         }
       ],
       image: "",
-      video: "/videos/miet-result.mp4"
+      video: "https://github.com/devxoshakya/portfolio/raw/main/public/videos/miet-result.mp4"
 
     },
     {
@@ -243,7 +243,7 @@ export const DATA = {
         }
       ],
       image: "",
-      video: "/videos/watcher.mp4"
+      video: "https://github.com/devxoshakya/portfolio/raw/main/public/videos/watcher.mp4"
 
     },
     {
