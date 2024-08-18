@@ -4,19 +4,47 @@ import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import AvatarCircles from "@/components/magicui/avatar-circles";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
+
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
+  const people = [
+    {
+      id: 1,
+      name: "Dev Shakya",
+      designation: "Fullstack Developer & Founder",
+      image: "/me.jpeg",
+    },
+    {
+      id: 2,
+      name: "Ayush Bisht",
+      designation: "Android Developer",
+      image: "/ayush.jpeg",
+    },
+    {
+      id: 3,
+      name: "Yagyansh Singh Deshwal",
+      designation: "Artificial Intelligence Specialist",
+      image: "/yaggy.png",
+    },
+    {
+      id: 4,
+      name: "Suryansh Patwal",
+      designation: "Scalable Systems Architect",
+      image: "/suryansh.jpeg",
+    }
+  ];
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
-      <Analytics/>
+      <Analytics />
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
@@ -27,7 +55,6 @@ export default function Page() {
                 yOffset={8}
                 text={`Advance. Develop. Succeed.`}
               />
-              
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 bg-white border mb-4">
@@ -39,11 +66,11 @@ export default function Page() {
         </div>
       </section>
       <section>
-      <BlurFadeText
-                className="max-w-[650px] md:text-xl justify-evenly"
-                delay={BLUR_FADE_DELAY}
-                text={DATA.description}
-              />
+        <BlurFadeText
+          className="max-w-[650px] md:text-xl justify-evenly"
+          delay={BLUR_FADE_DELAY}
+          text={DATA.description}
+        />
       </section>
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
@@ -57,13 +84,14 @@ export default function Page() {
       </section>
 
       <section id="team">
-      
-          <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold mb-4">Meet our team !!</h2>
-          </BlurFade>
-          
-              <AvatarCircles className="" numPeople={1} avatarUrls={Array.from(DATA.people)}  />
-
+        <BlurFade delay={BLUR_FADE_DELAY * 5}>
+          <h2 className="text-xl font-bold mb-4">Meet our team !!</h2>
+        </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 6}>
+          <div className="flex flex-row items-center justify-center mb-10 w-full">
+            <AnimatedTooltip items={people} />
+          </div>
+        </BlurFade>
       </section>
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
@@ -174,8 +202,14 @@ export default function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? {""} <Link href={DATA.contact.social.email.url}
-                  className="text-blue-500 hover:underline"> send me an email</Link>{" "}
+                Want to chat? {""}{" "}
+                <Link
+                  href={DATA.contact.social.email.url}
+                  className="text-blue-500 hover:underline"
+                >
+                  {" "}
+                  send me an email
+                </Link>{" "}
                 and I&apos;ll respond whenever I can. I will ignore all
                 soliciting.
               </p>
