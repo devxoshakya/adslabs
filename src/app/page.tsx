@@ -17,6 +17,12 @@ const BLUR_FADE_DELAY = 0.04;
 export default function Page() {
   const people = [
     {
+      id: 0,
+      name: "Akshita Srivastava",
+      designation: "Frontend Developer & UI/UX Designer",
+      image: "/akshita.jpeg",
+    },
+    {
       id: 1,
       name: "Dev Shakya",
       designation: "Fullstack Developer & Founder",
