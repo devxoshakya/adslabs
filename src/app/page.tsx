@@ -45,6 +45,12 @@ export default function Page() {
       name: "Suryansh Patwal",
       designation: "Scalable Systems Architect",
       image: "/suryansh.jpeg",
+    },
+    {
+      id: 5,
+      name: "Manas Kush",
+      designation: "Fullstack Developer",
+      image: "/manas.jpeg",
     }
   ];
 
