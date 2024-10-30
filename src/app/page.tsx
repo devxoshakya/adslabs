@@ -19,7 +19,7 @@ export default function Page() {
     {
       id: 0,
       name: "Akshita Srivastava",
-      designation: "Frontend Developer & UI/UX Designer",
+      designation: "Frontend Developer & Co-Founder",
       image: "/akshita.jpeg",
     },
     {
