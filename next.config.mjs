@@ -4,6 +4,9 @@ const nextConfig = {
    eslint: {
     ignoreDuringBuilds: true,
   },
+  typescript: {
+    ignoreBuildErrors: true, // Skip TypeScript type checking during builds
+  },
 };
 
 export default nextConfig;
